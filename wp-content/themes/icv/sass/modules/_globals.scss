@@ -1,0 +1,67 @@
+//  ==========================================================================
+//  Helpers
+//  ==========================================================================
+	@mixin centerContainer($width, $minWidth){
+		float: left;
+		position: relative;
+		display: block;
+		width: #{$width}px;
+		min-width: #{$minWidth}px !important;
+		margin-left: -$width*.5+px;
+		left: 50%;
+	}
+	
+	@mixin backgroundImageStretch(){
+		-webkit-background-size: cover;
+		   -moz-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
+	}
+	
+//  ==========================================================================
+//  Fonts
+//  ==========================================================================
+
+	@import "compass";
+	@include font-face("Glober Bold", font-files("glober-bold.eot","glober-bold.ttf", "glober-bold.woff"));
+	@include font-face("Glober Regular", font-files("glober-regular.eot","glober-regular.ttf", "glober-regular.woff"));
+	@include font-face("Glober Light", font-files("glober-light.eot","glober-light.ttf", "glober-light.woff"));
+	@include font-face("Social Circle", font-files("ss-social-circle.eot", "ss-social-circle.ttf", "ss-social-circle.woff"));
+
+
+//  ==========================================================================
+//  Base 
+//  ==========================================================================	
+	
+	$hero-min-height: 			500px;
+	
+	$font-family-base: 			'Glober Regular', 'Helvetica', 'Arial', sans-serif !default;
+	$font-family-base-bold: 	'Glober Bold', 'Helvetica', 'Arial', sans-serif !default;
+	$font-family-base-light: 	'Glober Light', 'Helvetica', 'Arial',sans-serif !default;
+	$social-circle:				'Social Circle', 'Glober Regular', 'Helvetica', 'Arial', sans-serif !default;
+	$font-size-base:			12px !default;
+	$line-height-base:			14px !default;
+	$font-color-base:			#666 !default;
+	
+	$hero-font-size:			80px !default;
+	$hero-subhead-font-size:	24px !default;
+	$hero-font-family:			'Glober Bold', 'Helvetica', 'Arial', sans-serif !default;
+	$hero-sub-font-family:		'Glober Light', 'Helvetica', 'Arial', sans-serif !default;  	
+	
+	$section-heading-size:		84px !default;
+	$section-heading-color:		#5c6770 !default;
+	
+	$hero-arrows: 				sprite-map("arrows/*.png");
+	$large-page-arrows: 		sprite-map("arrowslarge/*.png");
+	
+//  ==========================================================================
+//  Colors
+//  ==========================================================================	
+	
+	$brand-green:	#75ba56 !default;
+	$brand-dblue:	#39454e !default;
+	$brand-blue:	#0684c0 !default;
+	$brand-lblue:	#00aeef !default;
+	
+
+	

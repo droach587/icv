@@ -1,0 +1,42 @@
+//  ==========================================================================
+//  Button Mixins
+//  ==========================================================================
+.btn{
+	font: normal $font-size-base $font-family-base-bold;
+	text-transform: uppercase;
+	padding: 10px 25px 10px 25px;
+	cursor: pointer;
+	color: white;
+	border: none;
+	@include inline-block;
+	@include transition-property(all);
+	@include transition-duration(.5s);
+}
+
+.btn--green{
+	background: $brand-green;
+	&:hover{
+		background: $brand-blue;
+	}
+}
+
+.large-arrow{
+	width: 28px;
+	height: 59px;
+	position: absolute;
+	top: 50%;
+	background: $large-page-arrows;
+	background-repeat: no-repeat;
+	text-indent: -3000px;
+	overflow: hidden;
+	&.left{ 
+		left: -10%; 
+		&.black{ background-position: 0px 0px; }
+		&.black:hover{ background-position: 0px -59px;}
+	}
+	&.right{ 
+		right: -10%; 
+		&.black{ background-position: 0px -177px; }
+		&.black:hover{ background-position: 0px -118px;}
+	}
+}
